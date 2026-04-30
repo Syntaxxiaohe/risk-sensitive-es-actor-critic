@@ -17,8 +17,8 @@ The code is intended as a research prototype. It is not a polished library.
 
 This public repository includes three parts.
 
-First, it includes a paper-aligned reproduction framework for static
-total-cost risk-sensitive RL objectives. The implemented objectives include:
+First, it includes a paper-aligned reproduction framework for risk-sensitive
+RL objectives and baselines. The implemented objectives include:
 
 - `mean`: risk-neutral mean-cost baseline.
 - `es`: static total-cost expected shortfall with alpha = 0.8.
@@ -159,11 +159,14 @@ Paper-aligned multi-objective run:
 python run_multiseed.py --seeds 7,17,31,43,59 --objectives es mean es06 var avar08 mean_var --iterations 1200 --num-episodes 8192 --validation-interval 50 --validation-episodes 10000 --output-root multirun_batched_1200x8192 --train-device cuda --rollout-mode batched --compare-device cuda --compare-eval-episodes 1000000 --compare-batch-size 262144
 ```
 
-Fixed composite lambda grid:
+Fixed composite example:
 
 ```bash
 python run_multiseed.py --seeds 7,17,31,43,59 --objectives composite_es --risk-alpha 0.8 --risk-lambda 0.5 --iterations 1200 --num-episodes 8192 --validation-interval 50 --validation-episodes 10000 --output-root multirun_composite_grid --train-device cuda --rollout-mode batched --compare-device cuda --compare-eval-episodes 1000000 --compare-batch-size 262144
 ```
+
+The fixed composite lambda-grid experiment can be reproduced by rerunning this
+command with `--risk-lambda` set to `0`, `0.25`, `0.5`, `0.75`, and `1`.
 
 Discrete preference-conditioned composite ES prototype:
 
