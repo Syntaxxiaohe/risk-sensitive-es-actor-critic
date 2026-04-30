@@ -1,4 +1,4 @@
-# 论文对齐版 Risk-Sensitive Actor-Critic
+# Risk-Sensitive Actor-Critic
 
 这个目录是用于复现论文《Risk-sensitive Reinforcement Learning Based on Convex Scoring Functions》的论文对齐版实现。原型版本保留在 `../risk_sensitive_es_ac/`，本目录在原型基础上拆分了 objective、rollout、evaluation、trainer，方便逐步加入更多论文目标和实验。
 
