@@ -1,9 +1,10 @@
-# Risk-Sensitive ES Actor-Critic
+# Risk-Sensitive Actor-Critic with Convex Scoring Functions
 
 This repository contains a paper-aligned implementation of risk-sensitive
-actor-critic methods based on convex scoring functions, together with two
-preliminary extensions for composite and preference-conditioned risk-sensitive
-reinforcement learning.
+actor-critic methods based on convex scoring functions. It includes several
+paper-aligned risk objectives, together with two preliminary ES-focused
+extensions for composite and preference-conditioned risk-sensitive reinforcement
+learning.
 
 The implementation is based on the finite-horizon statistical-arbitrage setting
 used in the paper:
